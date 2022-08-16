@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.accordion {
+    font-size: 18px;
+    background-color: grey;
+    color: black;
+    padding: 18px;
+    width: fit-content;
+    text-align: center;
+    }
