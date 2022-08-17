@@ -1,4 +1,5 @@
 # Guessing-Game
+
 Guessing game for lab-02
 
 Created a “Top Ten” at the bottom of your HTML page as an ordered list in HTML. Some ideas that you can include could be top ten movies, top ten favorite places, or top ten places to visit. You may choose to do whatever top ten list that you wish.
@@ -15,4 +16,3 @@ Give the user 6 attempts to guess the correct answer.
 The guesses will end once the user guesses a correct answer or they run out of attempts.
 Display all the possible correct answers to the user.
 Consider using a loop of some sort for this question.
-
