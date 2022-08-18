@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 'use strict';
 
 let userName = prompt('What\'s your name?'); {
@@ -12,47 +13,64 @@ let questions = [
   'Did I work as a high school teacher?',
 ];
 let answers = [
-  'no',
-  'yes',
-  'yes',
-  'yes',
-  'no',
+  ['no', 'n'],
+  ['yes', 'y'],
+  ['yes', 'y'],
+  ['yes', 'y'],
+  ['no', 'n']
 ];
 
 for (let i = 0; i < questions.length; i++) {
   let response = prompt(questions[i]);
-
+  let correct = false;
   if (typeof(answers[i]) !== 'string') {
 
-     for (let answer of answers[i]) {
+    for (let answer of answers[i]) {
       if (response.toLowerCase() === answer) {
         alert('Correct!');
+        correct = true;
         break;
       }
     }
+  }
+  if (correct === false) {
+    alert('Incorrect!');
+  }
+}
 
+let randomNum = Math.floor((Math.random() * 20) + 1);
+console.log(randomNum);
+
+for (let guessNum = 0; guessNum < 4; guessNum++) {
+  let userNum = parseInt(prompt('Guess a number between 1 and 20: '));
+
+  if (userNum === randomNum) {
+    alert('Nice guess! You\'re right.');
+    break;
+  } else if (userNum > randomNum) {
+    alert('Too high.');
   } else {
-    if (response.toLowerCase() === answers[i]) {
-      alert('That\'s right!');
-    } else {
-      alert('That\'s incorrect.');
-    }
+    alert('Too low!');
   }
+}
 
-  let randomNum = Math.floor(Math.random() * 20) + 1;
 
-  for (let guessNum = 0; guessNum < 4; guessNum++) {
-    let userNum = prompt('Guess a number between 1 and 20: ');
-    if (userNum === randomNum) {
-      alert('Nice guess!');
-    } else if (userNum > randomNum) {
-      alert('Too high.');
-    } else {
-      alert('Too low!');
+let statesLived = ['virginia', 'florida', 'new mexico', 'arizona', 'texas',];
+
+for (let i = 0; i < 7; i++) {
+    let stateGuessed = prompt('Can you guess a state I\'ve lived in?');
+    for (let j = 0; j < statesLived.length; j++) {
+
+    if (stateGuessed.toLowerCase() === statesLived[j]) {
+      alert('Good guess!');
+      return;
     }
-  }
+}
+    alert('Try again!');
+}
 
-  /* let numChildren = prompt('Do I have three kids? Please answer yes or no.').toLowerCase();
+
+/* let numChildren = prompt('Do I have three kids? Please answer yes or no.').toLowerCase();
 console.log(numChildren);
 
 if (numChildren === null) {
@@ -120,5 +138,5 @@ if (school === 'no' || school === 'n') {
   //console.log('Nope.')
   alert('Nope.');
 }
-*/alert('Thanks for playing, ' + userName + '.');
-}
+*/
+alert('Thanks for playing, ' + userName + '.');
