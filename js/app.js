@@ -59,7 +59,7 @@ for (let guessNum = 0; guessNum < 4; guessNum++) {
   }
 }
 
-
+/*
 let statesLived = ['virginia', 'florida', 'new mexico', 'arizona', 'texas',];
 
 for (let i = 0; i < 7; i++) { //change to while loop
@@ -76,5 +76,6 @@ for (let i = 0; i < 7; i++) { //change to while loop
     }
   }
 }
+*/
 alert('Thanks for playing, ' + userName + '.  You got ' + correctAnswers + ' right.');
 
