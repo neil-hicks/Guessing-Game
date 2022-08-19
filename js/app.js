@@ -57,7 +57,7 @@ for (let guessNum = 0; guessNum < 4; guessNum++) {
   } else {
     alert('Too low!');
   }
-  
+
 }
 states();
 
