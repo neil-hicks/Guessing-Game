@@ -1,10 +1,10 @@
 /* eslint-disable indent */
 'use strict';
-let correctAnswers = 0;
 
 let userName = prompt('What\'s your name?'); {
   alert('Hi, ' + userName + ', and welcome.');
 }
+//let correctAnswers = 0;
 
 let questions = [
   'Do I have three children?',
@@ -30,7 +30,7 @@ for (let i = 0; i < questions.length; i++) {
       if (response.toLowerCase() === answer) {
         //console.log('Correct!')
         alert('Correct!');
-        correctAnswers++;
+        //correctAnswers++;
         correct = true;
         break;
       }
@@ -50,32 +50,37 @@ for (let guessNum = 0; guessNum < 4; guessNum++) {
   if (userNum === randomNum) {
     //console.log('Correct!')
     alert('Nice guess! You\'re right.');
-    correctAnswers++;
+    //correctAnswers++;
     break;
   } else if (userNum > randomNum) {
     alert('Too high.');
   } else {
     alert('Too low!');
   }
+  
 }
+states();
 
-/*
-let statesLived = ['virginia', 'florida', 'new mexico', 'arizona', 'texas',];
 
-for (let i = 0; i < 7; i++) { //change to while loop
+  let statesLived = ['virginia', 'florida', 'new mexico', 'arizona', 'texas',];
+  let lived = false;
+
+function states() {
+while (lived === false) {
     let stateGuessed = prompt('Can you guess a state I\'ve lived in?');
-    for (let j = 0; j <statesLived.length; j++) {
-
-    if (stateGuessed.toLowerCase() === statesLived[j]) {
-      //console.log('Correct!')
+    for (let i = 0; i < 7; i++) {
+      if (stateGuessed.toLowerCase() === statesLived[i].toLowerCase()) {
+      console.log('Correct!');
       alert('Good guess!');
-      correctAnswers++;
+     // correctAnswers++;
+      lived = true;
       break;
       } else {
         alert('Try again!');
     }
   }
 }
-*/
-alert('Thanks for playing, ' + userName + '.  You got ' + correctAnswers + ' right.');
 
+// alert('Thanks for playing, ' + userName + '.  You got ' + correctAnswers + ' right.');
+
+}
